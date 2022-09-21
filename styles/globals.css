@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --Orange: #fb7413;
+  --White: #fff;
+  --LightGrey: #959eac;
+  --MediumGrey: #7c8798;
+  --DarkBlue: #252d37;
+  --VeryDarkBlue: #121417;
+}
+body {
+  background: var(--VeryDarkBlue);
+  font-size: 93.75%;
+  display: block;
+  font-family: Overpass, sans-serif;
+}
+body,
+button,
+div,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Overpass, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.mainContainer {
+  padding: 0 2rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1 1;
+  flex-direction: column;
+}
+.flowCard {
+  border-radius: 1rem;
+  background-image: radial-gradient(
+    farthest-side at 50% -10%,
+    #222933,
+    #1d242e,
+    #181e28
+  );
+  padding: 1.8rem 1.5rem;
+}
+.selectRatingWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  max-width: 21rem;
+}
+.starwrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--DarkBlue);
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1.7px rgb(0 0 0 / 10%);
+}
+.ratingList {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.ratingWapper {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+}
+.rate {
+  background-color: var(--DarkBlue);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  color: var(--MediumGrey);
+}
+.radioButton:hover ~ .rate {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+.radioButton:checked ~ .rate {
+  background-color: var(--LightGrey);
+  color: var(--White);
+}
+.radioButton {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+.rateSubmitBtn {
+  border: 0;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.8rem 1.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: transform 0.2s;
+  letter-spacing: 0.1rem;
+  background-color: var(--White);
+  color: var(--Orange);
+}
+.rateSubmitBtn:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+.rateSubmitBtn:active {
+  transform: scale(0.9);
+}
+.inforTextWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+h1,
+h2 {
+  color: var(--White);
+  padding: 0;
+  margin: 0;
+}
+p {
+  color: var(--MediumGrey);
+  padding: 0;
+  margin: 0;
+}
+.thankYouWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.7rem;
+  max-width: 18rem;
+}
+.thankyouText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+.thankyouText > h2,
+.thankyouText > p {
+  text-align: center;
+}
+.showRatingDetails {
+  border-radius: 2rem;
+  background-color: var(--DarkBlue);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 0.7rem 0.3rem;
+  color: var(--Orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -6px;
+}
